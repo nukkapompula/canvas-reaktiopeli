@@ -1,6 +1,6 @@
 Reaktio peli eli klikkaa palloa niin kauan kunnes pelaajan elämät loppuvat, elämät kuluvat kun klikkaa ohi tai pallo karkaa
 Piste countteri, tilastot...
-Jos pallo karkaa tai klikkaa ohi niin pelipäättyy ja printtaa yrityksen pisteet tilastot osioon, ei globaaleja tilastoja vaan pelikerran.
+Printtaa yrityksen pisteet tilastot osioon, ei globaaleja tilastoja vaan pelikerran.
 kyllä/ei. Kolme elämää, eli kolme kertaa saa mennä väärin ennen pelin päättymistä
 Voi liikkua Pää että väli-ilmansuuntiin 
 Pelialueen sisälle erikseen pienempi spawnausalue ettei pallo syntyisi liian lähelle reunaa.
