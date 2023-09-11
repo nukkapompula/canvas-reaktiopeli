@@ -9,8 +9,9 @@ pallon liikkumissuunnat:
 // pelin käynnistyminen, objektin luominen
 function lataa(){
     peliAlue.aloita();
-    pallo = new esine(160, 150, "yellow", 20);
+    pallo = new esine("yellow", 20);
     pallo.suunnanArpominen();
+    pallo.sijainninArpominen();
     document.getElementsByTagName("canvas")[0].addEventListener("click", testi);
 }
 
@@ -34,9 +35,7 @@ var peliAlue = {
 }
 
 // klikattavan objektin ominaisuudet, funktiot jne
-function esine(x, y, colour, radius){
-    this.x = x;
-    this.y = y;
+function esine(colour, radius){
     this.colour = colour;
     this.radius = radius;
     this.nopeus = 1;
@@ -87,6 +86,16 @@ function esine(x, y, colour, radius){
         } else {
             this.suunta = 7;
         }
+    }
+    this.sijainninArpominen = function(){
+        let Xmin = Math.ceil(50);
+        let Xmax = Math.floor(270);
+        let Ymin = Math.ceil(50);
+        let Ymax = Math.floor(190);
+        let arpaX = Math.floor(Math.random() * (Xmax - Xmin) + Xmin);
+        let arpaY = Math.floor(Math.random() * (Ymax - Ymin) + Ymin);
+        this.x = arpaX;
+        this.y = arpaY;
     }
 }
 
