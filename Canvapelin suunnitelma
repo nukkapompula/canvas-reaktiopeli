@@ -1,3 +1,4 @@
 Reaktio peli eli klikkaa palloa ennenkun pallo karkaa alueelta
-Piste countteri, osumis prosentti, tilastot...
-hyvä peli
+Piste countteri, tilastot...
+Jos pallo karkaa tai klikkaa ohi niin pelipäättyy ja printtaa yrityksen pisteet tilastot osioon, ei globaaleja tilastoja vaan pelikerran.
+kyllä/ei. Kolme elämää, eli kolme kertaa saa mennä väärin ennen pelin päättymistä
