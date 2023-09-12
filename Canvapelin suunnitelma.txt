@@ -29,3 +29,5 @@ PROJEKTIIN KÄYTETTY AIKA
 12.9.
 -tarkennuksia suunnitelmaan
 -pallon karkaaminen pelialueelta
+-pallon klikkaaminen
+-noin 4 tuntia työaikaa
