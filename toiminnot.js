@@ -63,6 +63,11 @@ function esine(colour, radius){
             this.x -= this.nopeus * 0.8;
             this.y -= this.nopeus * 0.8;
         }
+        // pelialueelta karkaaminen
+        if(this.x > peliAlue.canvas.width || this.x < 0 || this.y > peliAlue.canvas.height || this.y < 0){
+            this.suunnanArpominen();
+            this.sijainninArpominen();
+        }
     }
     this.suunnanArpominen = function(){
         /*
