@@ -1,4 +1,6 @@
 var pallo;
+var pisteet = 0;
+var elamat = 3;
 
 // pelin käynnistyminen, pallon luominen
 function lataa(){
@@ -6,7 +8,7 @@ function lataa(){
     pallo = new esine("yellow", 20);
     pallo.suunnanArpominen();
     pallo.sijainninArpominen();
-    peliAlue.canvas.addEventListener("click", Klikkaus);
+    peliAlue.canvas.addEventListener("mousedown", Klikkaus);
 }
 
 function Klikkaus(event){
@@ -18,7 +20,12 @@ function Klikkaus(event){
         && event.clientY > palloYla && event.clientY < palloAla){
         pallo.suunnanArpominen();
         pallo.sijainninArpominen();
+        pisteet += 1;
+    } else {
+        elamat -= 1;
     }
+    document.getElementById("pisteet").innerHTML = `pisteet ${pisteet}`;
+    document.getElementById("elamat").innerHTML = `elämät ${elamat}`;
 }
 
 // pelialueeseen liittyvät toiminnot
@@ -45,7 +52,7 @@ function esine(colour, radius){
         kti = peliAlue.konteksti;
         kti.fillStyle = colour;
         kti.beginPath();
-        kti.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+        kti.arc(this.x, this.y, this.radius/2, 0, Math.PI * 2);
         kti.fill();
     }
     this.liiku = function(){
