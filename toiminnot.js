@@ -9,7 +9,7 @@ function lataa(){
     document.getElementsByTagName("canvas")[0].addEventListener("click", testi);
 }
 
-function testi(event){
+function Klikkaus(event){
     console.log(event.clientX, event.clientY);
 }
 

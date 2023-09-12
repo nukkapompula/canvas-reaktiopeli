@@ -9,6 +9,8 @@ istunnon aiemmat pistesaavutukset.
 päästessä ulos pelialueelta.
 -Jotta pallo ei uudestisynny liian lähelle pelialueen reunaa, on sen "syntymäalue" pienempi kuin 
 pelialue.
+-Näppäin pelin aloittamiseeen
+-Pelin ohjeet enne pelin aloittamista
 
 
 
