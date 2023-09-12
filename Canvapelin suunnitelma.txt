@@ -1,0 +1,22 @@
+SUUNNITELMA
+-Reaktiopeli, eli pelaaja yrittää klikata palloa niin kauan kunnes elämät loppuvat. 
+Elämät kuluvat pallosta ohi klikatessa tai pallon karatessa ruudun ulkopuolelle.
+-Elämiä annetaan pelaajalle kolme. 
+-Canvas-elementin ulkopuolella näytetään piste- ja elämätilanne sekä pelaajan tämänhetkisen 
+istunnon aiemmat pistesaavutukset.
+-Pallon liikkumissuunta valitaan arpomalla. Tämä suoritetaan aina pelaajan klikatessa palloa 
+(jolloin pelaaja kerryttää pisteitä ja pallo siirtyy sattumanvaraiseen paikkaan) tai pallon 
+päästessä ulos pelialueelta.
+-Jotta pallo ei uudestisynny liian lähelle pelialueen reunaa, on sen "syntymäalue" pienempi kuin 
+pelialue.
+
+
+
+PROJEKTIIN KÄYTETTY AIKA
+11.9.2023
+-projektin aloitus
+-pelin sääntöjen & toimintojen suunnittelua
+-rungon koodaaminen
+-noin 3½ tuntia työaikaa
+
+12.9.
