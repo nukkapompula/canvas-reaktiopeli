@@ -13,6 +13,14 @@ pelialue.
 -Pelin ohjeet enne pelin aloittamista
 
 
+To do:
+pelin päättyy kun elämät tippuu nollaan
+printtaa tuloksen pelin päätyttyä
+napista alkaa peli
+
+
+
+
 
 PROJEKTIIN KÄYTETTY AIKA
 11.9.2023
