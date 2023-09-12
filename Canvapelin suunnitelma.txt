@@ -31,4 +31,10 @@ PROJEKTIIN KÄYTETTY AIKA
 
 12.9.
 -tarkennuksia suunnitelmaan
+<<<<<<< HEAD
 -pallon karkaaminen pelialueelta
+=======
+-pallon karkaaminen pelialueelta
+-pallon klikkaaminen
+-noin 4 tuntia työaikaa
+>>>>>>> 7722b6cc6bfd1ab1991901466371bb342be54d2d
