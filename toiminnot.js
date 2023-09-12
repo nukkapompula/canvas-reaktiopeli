@@ -6,11 +6,19 @@ function lataa(){
     pallo = new esine("yellow", 20);
     pallo.suunnanArpominen();
     pallo.sijainninArpominen();
-    document.getElementsByTagName("canvas")[0].addEventListener("click", testi);
+    peliAlue.canvas.addEventListener("click", Klikkaus);
 }
 
 function Klikkaus(event){
-    console.log(event.clientX, event.clientY);
+    const palloYla = pallo.y;
+    const palloAla = pallo.y + pallo.radius;
+    const palloVasen = pallo.x;
+    const palloOikea = pallo.x + pallo.radius;
+    if(event.clientX > palloVasen && event.clientX < palloOikea 
+        && event.clientY > palloYla && event.clientY < palloAla){
+        pallo.suunnanArpominen();
+        pallo.sijainninArpominen();
+    }
 }
 
 // pelialueeseen liittyvät toiminnot
