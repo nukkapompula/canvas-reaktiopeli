@@ -39,7 +39,6 @@ function esine(colour, radius){
         kti.beginPath();
         kti.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
         kti.fill();
-        // kti.fillRect(this.x, this.y, this.radius, this.radius);
     }
     this.liiku = function(){
         if(this.suunta == 0){
