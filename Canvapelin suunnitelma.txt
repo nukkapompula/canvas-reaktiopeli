@@ -35,4 +35,5 @@ PROJEKTIIN KÄYTETTY AIKA
 -noin 4 tuntia työaikaa
 
 13.9.
--
+-pallon osuma-alueen hienosäätö
+-näkyvät laskurit elämille ja pisteille

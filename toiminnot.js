@@ -1,4 +1,8 @@
 var pallo;
+var pisteet = 0;
+var elamat = 3;
+var pisteLaskuri = document.getElementById("pisteet");
+var elamaLaskuri = document.getElementById("elamat");
 
 // pelin käynnistyminen, pallon luominen
 function lataa(){
@@ -7,6 +11,8 @@ function lataa(){
     pallo.suunnanArpominen();
     pallo.sijainninArpominen();
     peliAlue.canvas.addEventListener("mousedown", klikkaus);
+    pisteLaskuri.innerHTML = `Pisteet: ${pisteet}`;
+    elamaLaskuri.innerHTML = `Elämät: ${elamat}`;
 }
 
 function klikkaus(event){
@@ -18,7 +24,12 @@ function klikkaus(event){
         && event.clientY > palloYla && event.clientY < palloAla){
         pallo.suunnanArpominen();
         pallo.sijainninArpominen();
+        pisteet += 1;
+    } else {
+        elamat -= 1;
     }
+    pisteLaskuri.innerHTML = `Pisteet: ${pisteet}`;
+    elamaLaskuri.innerHTML = `Elämät: ${elamat}`;
 }
 
 // pelialueeseen liittyvät toiminnot
