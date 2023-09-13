@@ -6,9 +6,24 @@
     <title>Reaktiopeli</title>
     <link rel="stylesheet" href="tyylit.css">
 </head>
-<body onload="lataa()">
+<body>
 
     <script src="toiminnot.js"></script>
-    
+
+    <div id="ohjeet"> 
+        <p> Klikkaa palloa ja kerää pisteitä, menetät elämiä klikkaamalla ohi tai jos pallo karkaa ruudun ulkopuolelle.
+            Peli päättyy kun elämät loppuvat, voit ansaita puuttuvia elämiä osumalla palloon.
+        </p>
+       
+        <button onclick="lataa()">Aloita peli </button>
+    </div>
+
+
+    <div id="tulokset">
+        <button onclick="lataa()">Pelaa uudelleen </button>
+
+        <p id="edelliset">      </p>
+
+    </div>
 </body>
 </html>
