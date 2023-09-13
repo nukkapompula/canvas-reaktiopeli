@@ -129,8 +129,8 @@ function esine(vari, sade){
 // pallon sijainnin, pisteiden ym. päivittäminen
 function paivitaPeliAlue(){
     peliAlue.tyhjenna();
-    pallo.paivita();
     pallo.liiku();
+    pallo.paivita();
     if(elamat == 0){
         peliAlue.pysayta();
     }
