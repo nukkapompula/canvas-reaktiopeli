@@ -1,8 +1,6 @@
 var pallo;
 var pisteet = 0;
 var elamat = 3;
-var pisteLaskuri = document.getElementById("pisteet");
-var elamaLaskuri = document.getElementById("elamat");
 
 // pelin käynnistyminen, pallon luominen
 function lataa(){
@@ -11,8 +9,6 @@ function lataa(){
     pallo.suunnanArpominen();
     pallo.sijainninArpominen();
     peliAlue.canvas.addEventListener("mousedown", klikkaus);
-    pisteLaskuri.innerHTML = `Pisteet: ${pisteet}`;
-    elamaLaskuri.innerHTML = `Elämät: ${elamat}`;
 }
 
 function klikkaus(event){
@@ -28,8 +24,6 @@ function klikkaus(event){
     } else {
         elamat -= 1;
     }
-    pisteLaskuri.innerHTML = `Pisteet: ${pisteet}`;
-    elamaLaskuri.innerHTML = `Elämät: ${elamat}`;
 }
 
 // pelialueeseen liittyvät toiminnot
@@ -58,6 +52,10 @@ function esine(vari, sade){
         kti.beginPath();
         kti.arc(this.x, this.y, this.sade / 2, 0, Math.PI * 2);
         kti.fill();
+        kti.font = "20px Arial";
+        kti.fillStyle = "rgba(0,0,0,0.7)";
+        kti.fillText(`Pisteet ${pisteet}`, 10, 30);
+        kti.fillText(`Elämät ${elamat}`, 230, 30);
     }
     this.liiku = function(){
         if(this.suunta == 0){
@@ -85,6 +83,7 @@ function esine(vari, sade){
         if(this.x > peliAlue.canvas.width || this.x < 0 || this.y > peliAlue.canvas.height || this.y < 0){
             this.suunnanArpominen();
             this.sijainninArpominen();
+            elamat -= 1;
         }
     }
     this.suunnanArpominen = function(){
