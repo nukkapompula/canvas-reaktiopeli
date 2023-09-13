@@ -36,3 +36,5 @@ PROJEKTIIN KÄYTETTY AIKA
 -näkyvät laskurit elämille ja pisteille
 -pelin päättyminen
 -pallon värivaihto
+-CSS-tyylittelyä
+-testailua
