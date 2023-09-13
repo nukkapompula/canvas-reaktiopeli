@@ -38,3 +38,4 @@ PROJEKTIIN KÄYTETTY AIKA
 -pallon värivaihto
 -CSS-tyylittelyä
 -testailua
+-noin 5 tuntia työaikaa
