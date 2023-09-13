@@ -9,6 +9,9 @@ pallon päästessä ulos pelialueelta. Molemmat tapaukset arpovat myös pallon s
 -Jotta pallo ei uudestisynny liian lähelle pelialueen reunaa, on sen "syntymäalue" pienempi kuin 
 pelialue.
 -Peli aloitetaan nappia painamalla. Samassa ruudussa pelaaja voi lukea peliohjeet.
+-Joka kymmenes piste pallo nopeutuu.
+-Jos elämiä ei ole maksimimäärä ja pelaaja osuu kymmenennellä kerralla palloon, hän saa ylimääräisen 
+elämän.
 
 
 To do:

@@ -24,6 +24,13 @@ function klikkaus(event){
     } else {
         elamat -= 1;
     }
+    // pallon nopeutus ja ylimääräinen elämä
+    if(pisteet > 0 && pisteet % 10 == 0){
+        pallo.nopeus += 0.1;
+        if(elamat < 3){
+            elamat += 1;
+        }
+    }
 }
 
 // pelialueeseen liittyvät toiminnot
