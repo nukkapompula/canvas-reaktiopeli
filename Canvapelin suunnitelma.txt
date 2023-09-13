@@ -12,12 +12,7 @@ pelialue.
 -Joka kymmenes piste pallo nopeutuu.
 -Jos elämiä ei ole maksimimäärä ja pelaaja osuu kymmenennellä kerralla palloon, hän saa ylimääräisen 
 elämän.
-
-
-To do:
-pelin päättyy kun elämät tippuu nollaan
-printtaa tuloksen pelin päätyttyä
-napista alkaa peli
+-Käynnistyksen ohessa pallolle arvotaan uniikki väri.
 
 
 
@@ -39,3 +34,5 @@ PROJEKTIIN KÄYTETTY AIKA
 13.9.
 -pallon osuma-alueen hienosäätö
 -näkyvät laskurit elämille ja pisteille
+-pelin päättyminen
+-pallon värivaihto

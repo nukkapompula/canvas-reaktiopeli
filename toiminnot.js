@@ -54,7 +54,11 @@ var peliAlue = {
     pysayta : function(){
         clearInterval(this.ajastin);
         document.getElementById("tulokset").style.display = "block";
-        document.getElementById("edelliset").innerHTML += `${pisteet} `;
+        if(document.getElementById("edelliset").innerHTML == "Aiempia pistesaaliita: "){
+            document.getElementById("edelliset").innerHTML += `${pisteet} `;
+        } else {
+            document.getElementById("edelliset").innerHTML += `| ${pisteet} `;
+        }
     }
 }
 
@@ -66,11 +70,15 @@ function esine(sade, vari){
     this.paivita = function(){
         kti = peliAlue.konteksti;
         kti.fillStyle = vari;
+        kti.strokeStyle = "black";
         kti.beginPath();
         kti.arc(this.x, this.y, this.sade / 2, 0, Math.PI * 2);
         kti.fill();
+        kti.beginPath();
+        kti.arc(this.x, this.y, this.sade / 2, 0, Math.PI * 2);
+        kti.stroke();
         kti.font = "20px Arial";
-        kti.fillStyle = "rgba(0,0,0,0.7)";
+        kti.fillStyle = "black";
         kti.fillText(`Pisteet ${pisteet}`, 10, 30);
         kti.fillText(`Elämät ${elamat}`, 230, 30);
     }
