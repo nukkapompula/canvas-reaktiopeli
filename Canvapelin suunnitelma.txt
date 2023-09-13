@@ -9,8 +9,7 @@ istunnon aiemmat pistesaavutukset.
 päästessä ulos pelialueelta.
 -Jotta pallo ei uudestisynny liian lähelle pelialueen reunaa, on sen "syntymäalue" pienempi kuin 
 pelialue.
--Näppäin pelin aloittamiseeen
--Pelin ohjeet enne pelin aloittamista
+-Peli aloitetaan nappia painamalla. Samassa ruudussa pelaaja voi lukea peliohjeet.
 
 
 To do:
@@ -31,10 +30,9 @@ PROJEKTIIN KÄYTETTY AIKA
 
 12.9.
 -tarkennuksia suunnitelmaan
-<<<<<<< HEAD
--pallon karkaaminen pelialueelta
-=======
 -pallon karkaaminen pelialueelta
 -pallon klikkaaminen
 -noin 4 tuntia työaikaa
->>>>>>> 7722b6cc6bfd1ab1991901466371bb342be54d2d
+
+13.9.
+-

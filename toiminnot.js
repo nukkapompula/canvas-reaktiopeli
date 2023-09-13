@@ -11,9 +11,9 @@ function lataa(){
 
 function Klikkaus(event){
     const palloYla = pallo.y;
-    const palloAla = pallo.y + pallo.radius;
+    const palloAla = pallo.y + pallo.sade;
     const palloVasen = pallo.x;
-    const palloOikea = pallo.x + pallo.radius;
+    const palloOikea = pallo.x + pallo.sade;
     if(event.clientX > palloVasen && event.clientX < palloOikea 
         && event.clientY > palloYla && event.clientY < palloAla){
         pallo.suunnanArpominen();
@@ -37,15 +37,15 @@ var peliAlue = {
 }
 
 // klikattavan pallon ominaisuudet, funktiot jne
-function esine(colour, radius){
-    this.colour = colour;
-    this.radius = radius;
+function esine(vari, sade){
+    this.vari = vari;
+    this.sade = sade;
     this.nopeus = 1;
     this.paivita = function(){
         kti = peliAlue.konteksti;
-        kti.fillStyle = colour;
+        kti.fillStyle = vari;
         kti.beginPath();
-        kti.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+        kti.arc(this.x, this.y, this.sade, 0, Math.PI * 2);
         kti.fill();
     }
     this.liiku = function(){
