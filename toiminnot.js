@@ -9,7 +9,7 @@ function lataa(){
     document.getElementById("tulokset").style.display = "none";
     pisteet = 0;
     elamat = 3;
-    pallo = new esine("yellow", 20);
+    pallo = new esine(20, arvoVari());
     pallo.suunnanArpominen();
     pallo.sijainninArpominen();
     peliAlue.canvas.addEventListener("mousedown", klikkaus);
@@ -25,6 +25,7 @@ function klikkaus(event){
         pallo.suunnanArpominen();
         pallo.sijainninArpominen();
         pisteet += 1;
+        pallo.vari = arvoVari();
     } else {
         elamat -= 1;
     }
@@ -58,7 +59,7 @@ var peliAlue = {
 }
 
 // klikattavan pallon ominaisuudet, funktiot jne
-function esine(vari, sade){
+function esine(sade, vari){
     this.vari = vari;
     this.sade = sade;
     this.nopeus = 1;
@@ -147,4 +148,11 @@ function paivitaPeliAlue(){
     if(elamat < 1){
         peliAlue.pysayta();
     }
+}
+
+function arvoVari(){
+    let vari1 = Math.round(Math.random()*255);
+    let vari2 = Math.round(Math.random()*255);
+    let vari3 = Math.round(Math.random()*255);
+    return `rgb(${vari1}, ${vari2}, ${vari3})`;
 }
