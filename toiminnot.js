@@ -38,6 +38,9 @@ var peliAlue = {
     },
     tyhjenna : function(){
         this.konteksti.clearRect(0, 0, this.canvas.width, this.canvas.height);
+    },
+    pysayta : function(){
+        clearInterval(this.ajastin);
     }
 }
 
@@ -128,4 +131,7 @@ function paivitaPeliAlue(){
     peliAlue.tyhjenna();
     pallo.paivita();
     pallo.liiku();
+    if(elamat == 0){
+        peliAlue.pysayta();
+    }
 }
