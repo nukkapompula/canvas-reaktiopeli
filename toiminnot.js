@@ -6,14 +6,14 @@ function lataa(){
     pallo = new esine("yellow", 20);
     pallo.suunnanArpominen();
     pallo.sijainninArpominen();
-    peliAlue.canvas.addEventListener("click", Klikkaus);
+    peliAlue.canvas.addEventListener("mousedown", klikkaus);
 }
 
-function Klikkaus(event){
-    const palloYla = pallo.y;
-    const palloAla = pallo.y + pallo.sade;
-    const palloVasen = pallo.x;
-    const palloOikea = pallo.x + pallo.sade;
+function klikkaus(event){
+    const palloYla = pallo.y - 2;
+    const palloAla = pallo.y + pallo.sade - 1;
+    const palloVasen = pallo.x - 2;
+    const palloOikea = pallo.x + pallo.sade - 1;
     if(event.clientX > palloVasen && event.clientX < palloOikea 
         && event.clientY > palloYla && event.clientY < palloAla){
         pallo.suunnanArpominen();
@@ -45,7 +45,7 @@ function esine(vari, sade){
         kti = peliAlue.konteksti;
         kti.fillStyle = vari;
         kti.beginPath();
-        kti.arc(this.x, this.y, this.sade, 0, Math.PI * 2);
+        kti.arc(this.x, this.y, this.sade / 2, 0, Math.PI * 2);
         kti.fill();
     }
     this.liiku = function(){
