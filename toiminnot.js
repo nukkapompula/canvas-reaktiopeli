@@ -53,6 +53,7 @@ var peliAlue = {
     pysayta : function(){
         clearInterval(this.ajastin);
         document.getElementById("tulokset").style.display = "block";
+        document.getElementById("edelliset").innerHTML += `${pisteet} `;
     }
 }
 
