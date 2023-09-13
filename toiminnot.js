@@ -5,6 +5,10 @@ var elamat = 3;
 // pelin käynnistyminen, pallon luominen
 function lataa(){
     peliAlue.aloita();
+    document.getElementById("ohjeet").style.display = "none";
+    document.getElementById("tulokset").style.display = "none";
+    pisteet = 0;
+    elamat = 3;
     pallo = new esine("yellow", 20);
     pallo.suunnanArpominen();
     pallo.sijainninArpominen();
@@ -48,6 +52,7 @@ var peliAlue = {
     },
     pysayta : function(){
         clearInterval(this.ajastin);
+        document.getElementById("tulokset").style.display = "block";
     }
 }
 
@@ -138,7 +143,7 @@ function paivitaPeliAlue(){
     peliAlue.tyhjenna();
     pallo.liiku();
     pallo.paivita();
-    if(elamat == 0){
+    if(elamat < 1){
         peliAlue.pysayta();
     }
 }
