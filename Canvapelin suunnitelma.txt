@@ -43,3 +43,4 @@ PROJEKTIIN KÄYTETTY AIKA
 14.9.
 -testausta
 -pelisuorituksen kommentointi
+-koodin siistintää

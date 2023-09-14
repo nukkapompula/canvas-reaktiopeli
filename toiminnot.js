@@ -2,7 +2,7 @@ var pallo;
 var pisteet = 0;
 var elamat = 3;
 
-// pelin käynnistyminen, pallon luominen
+// pelin käynnistyminen, arvojen alustaminen, pallon luominen
 function lataa(){
     peliAlue.aloita();
     document.getElementById("ohjeet").style.display = "none";
@@ -74,7 +74,7 @@ var peliAlue = {
     }
 }
 
-// klikattavan pallon ominaisuudet, funktiot jne
+// klikattavan pallon ominaisuudet, funktiot jne.
 function esine(sade, vari){
     this.vari = vari;
     this.sade = sade;
@@ -161,7 +161,7 @@ function esine(sade, vari){
     }
 }
 
-// pallon sijainnin, pisteiden ym. päivittäminen
+// pallon sijainnin, pisteiden ym. päivittäminen ajastimen kautta
 function paivitaPeliAlue(){
     peliAlue.tyhjenna();
     pallo.liiku();
@@ -171,6 +171,7 @@ function paivitaPeliAlue(){
     }
 }
 
+// pallon väri arvotaan kunkin kierroksen alussa
 function arvoVari(){
     let vari1 = Math.round(Math.random()*255);
     let vari2 = Math.round(Math.random()*255);
