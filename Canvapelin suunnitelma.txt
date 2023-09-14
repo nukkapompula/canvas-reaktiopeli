@@ -1,17 +1,17 @@
 SUUNNITELMA
 -Reaktiopeli, eli pelaaja yrittää klikata liikkuvaa palloa niin kauan kunnes elämät loppuvat. 
-Elämät kuluvat pallosta ohi klikatessa tai pallon karatessa ruudun ulkopuolelle. Osunut klikkaus 
-lisää pelaajalle pisteitä.
--Elämät (3kpl) ja pisteet piirretään canvasille. 
+ Elämät kuluvat pallosta ohi klikatessa tai pallon karatessa ruudun ulkopuolelle. Osunut klikkaus 
+ lisää pelaajalle pisteitä.
+-Elämät (maksimissaan 3kpl) ja pisteet piirretään canvasille. 
 -Canvasin ulkopuolella näytetään pelaajan tämänhetkisen istunnon aiemmat pistesaavutukset.
 -Pallon liikkumissuunta valitaan arpomalla. Uusi suunta valitaan aina pelaajan klikatessa palloa tai 
-pallon päästessä ulos pelialueelta. Molemmat tapaukset arpovat myös pallon sijainnin uudestaan.
+ pallon päästessä ulos pelialueelta. Molemmat tapaukset arpovat myös pallon sijainnin uudestaan.
 -Jotta pallo ei uudestisynny liian lähelle pelialueen reunaa, on sen "syntymäalue" pienempi kuin 
-pelialue.
+ pelialue.
 -Peli aloitetaan nappia painamalla. Samassa ruudussa pelaaja voi lukea peliohjeet.
 -Joka kymmenes piste pallo nopeutuu.
 -Jos elämiä ei ole maksimimäärä ja pelaaja osuu kymmenennellä kerralla palloon, hän saa ylimääräisen 
-elämän.
+ elämän.
 -Käynnistyksen ohessa pallolle arvotaan uniikki väri.
 
 
