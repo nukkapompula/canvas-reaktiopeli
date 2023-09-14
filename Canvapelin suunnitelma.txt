@@ -39,3 +39,7 @@ PROJEKTIIN KÄYTETTY AIKA
 -CSS-tyylittelyä
 -testailua
 -noin 5 tuntia työaikaa
+
+14.9.
+-testausta
+-pelisuorituksen kommentointi

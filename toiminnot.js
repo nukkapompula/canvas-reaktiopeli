@@ -7,6 +7,7 @@ function lataa(){
     peliAlue.aloita();
     document.getElementById("ohjeet").style.display = "none";
     document.getElementById("tulokset").style.display = "none";
+    document.getElementById("kommentti").innerHTML = "Elämät loppuivat,";
     pisteet = 0;
     elamat = 3;
     pallo = new esine(20, arvoVari());
@@ -54,10 +55,21 @@ var peliAlue = {
     pysayta : function(){
         clearInterval(this.ajastin);
         document.getElementById("tulokset").style.display = "block";
-        if(document.getElementById("edelliset").innerHTML == "Aiempia pistesaaliita: "){
+        if(document.getElementById("edelliset").innerHTML == "Pistesaaliisi: "){
             document.getElementById("edelliset").innerHTML += `${pisteet} `;
         } else {
             document.getElementById("edelliset").innerHTML += `| ${pisteet} `;
+        }
+        if(pisteet < 15){
+            document.getElementById("kommentti").innerHTML += " tarvitset hieman harjoitusta.";
+        } else if(pisteet >= 15 && pisteet < 30){
+            document.getElementById("kommentti").innerHTML += " ei huono saavutus.";
+        } else if(pisteet >= 30 && pisteet < 60){
+            document.getElementById("kommentti").innerHTML += " taitavasti pelattu!";
+        } else if(pisteet >= 60 && pisteet < 100){
+            document.getElementById("kommentti").innerHTML += " erinomainen tulos!";
+        } else {
+            document.getElementById("kommentti").innerHTML += " kerrassaan ilmiömäinen suoritus!";
         }
     }
 }
@@ -71,6 +83,7 @@ function esine(sade, vari){
         kti = peliAlue.konteksti;
         kti.fillStyle = vari;
         kti.strokeStyle = "black";
+        kti.lineWidth = 2;
         kti.beginPath();
         kti.arc(this.x, this.y, this.sade / 2, 0, Math.PI * 2);
         kti.fill();
