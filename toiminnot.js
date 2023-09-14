@@ -10,7 +10,7 @@ function lataa(){
     document.getElementById("kommentti").innerHTML = "Elämät loppuivat,";
     pisteet = 0;
     elamat = 3;
-    pallo = new esine(20, arvoVari());
+    pallo = new esine(20, varinArpominen());
     pallo.suunnanArpominen();
     pallo.sijainninArpominen();
     peliAlue.canvas.addEventListener("mousedown", klikkaus);
@@ -26,7 +26,7 @@ function klikkaus(event){
         pallo.suunnanArpominen();
         pallo.sijainninArpominen();
         pisteet += 1;
-        pallo.vari = arvoVari();
+        pallo.vari = varinArpominen();
     } else {
         elamat -= 1;
     }
@@ -172,7 +172,7 @@ function paivitaPeliAlue(){
 }
 
 // pallon väri arvotaan kunkin kierroksen alussa
-function arvoVari(){
+function varinArpominen(){
     let vari1 = Math.round(Math.random()*255);
     let vari2 = Math.round(Math.random()*255);
     let vari3 = Math.round(Math.random()*255);
