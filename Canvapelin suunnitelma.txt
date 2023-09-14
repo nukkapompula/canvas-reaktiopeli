@@ -44,3 +44,5 @@ PROJEKTIIN KÄYTETTY AIKA
 -testausta
 -pelisuorituksen kommentointi
 -koodin siistintää
+-peli valmis
+-noin 2½ tuntia työaikaa
