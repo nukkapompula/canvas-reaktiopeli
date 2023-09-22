@@ -1,6 +1,7 @@
 var pallo;
 var pisteet = 0;
 var elamat = 3;
+var extra;
 
 // pelin käynnistyminen, arvojen alustaminen, pallon luominen
 function lataa(){
@@ -10,6 +11,7 @@ function lataa(){
     document.getElementById("kommentti").innerHTML = "Elämät loppuivat,";
     pisteet = 0;
     elamat = 3;
+    extra = new bonus(20, "blue");
     pallo = new esine(20, varinArpominen());
     pallo.suunnanArpominen();
     pallo.sijainninArpominen();
@@ -33,6 +35,7 @@ function klikkaus(event){
     // pallon nopeutus ja ylimääräinen elämä
     if(pisteet > 0 && pisteet % 10 == 0){
         pallo.nopeus += 0.1;
+        extra.sijainninArpominen();
         if(elamat < 3){
             elamat += 1;
         }
@@ -166,6 +169,7 @@ function paivitaPeliAlue(){
     peliAlue.tyhjenna();
     pallo.liiku();
     pallo.paivita();
+    extra.paivita();
     if(elamat < 1){
         peliAlue.pysayta();
     }
@@ -177,4 +181,40 @@ function varinArpominen(){
     let vari2 = Math.round(Math.random()*255);
     let vari3 = Math.round(Math.random()*255);
     return `rgb(${vari1}, ${vari2}, ${vari3})`;
+}
+
+
+
+
+
+
+
+function bonus(sade, vari){
+    this.x = 100;
+    this.y = 100;
+    this.vari = vari;
+    this.sade = sade;
+    this.paivita = function(){
+        kti = peliAlue.konteksti;
+        kti.fillStyle = vari;
+        kti.strokeStyle = "black";
+        kti.lineWidth = 2;
+        kti.beginPath();
+        kti.arc(this.x, this.y, this.sade / 2, 0, Math.PI * 2);
+        kti.fill();
+        kti.beginPath();
+        kti.arc(this.x, this.y, this.sade / 2, 0, Math.PI * 2);
+        kti.stroke();
+    }
+
+    this.sijainninArpominen = function(){
+        let Xmin = Math.ceil(50);
+        let Xmax = Math.floor(270);
+        let Ymin = Math.ceil(50);
+        let Ymax = Math.floor(190);
+        let arpaX = Math.floor(Math.random() * (Xmax - Xmin) + Xmin);
+        let arpaY = Math.floor(Math.random() * (Ymax - Ymin) + Ymin);
+        this.x = arpaX;
+        this.y = arpaY;
+    }
 }
