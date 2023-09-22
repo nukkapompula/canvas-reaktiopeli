@@ -35,15 +35,17 @@ function klikkaus(event){
         pisteet += 1;
     } else if (event.clientX > extraVasen && event.clientX < extraOikea 
         && event.clientY > extraYla && event.clientY < extraAla) {
+            pisteet += 1;
+            if(elamat < 3){
             elamat += 1;
-            pisteet += 3;
+            }        
     } else {
         elamat -= 1;
     }
     extra.x = -100
     extra.y = -100
 
-    // pallon nopeutus ja ylimääräinen elämä
+    // bonus pallon spawnaus
     if(pisteet > 0 && pisteet % 10 == 0){
         extra.sijainninArpominen();
 
@@ -162,7 +164,6 @@ function esine(sade, vari){
 
         if(pisteet > 0 && pisteet % 5 == 0){
             pallo.nopeus += 0.2;
-            extra.sijainninArpominen();
         }
     }
     this.sijainninArpominen = function(){
