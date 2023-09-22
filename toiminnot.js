@@ -23,25 +23,22 @@ function klikkaus(event){
     const palloAla = pallo.y + pallo.sade - 1;
     const palloVasen = pallo.x - 2;
     const palloOikea = pallo.x + pallo.sade - 1;
-    if(event.clientX > palloVasen && event.clientX < palloOikea 
-        && event.clientY > palloYla && event.clientY < palloAla){
-        pallo.suunnanArpominen();
-        pallo.sijainninArpominen();
-        pisteet += 1;
-        pallo.vari = varinArpominen();
-    } else {
-        elamat -= 1;
-    }
-
     const extraYla = extra.y - 2;
     const extraAla = extra.y + extra.sade - 1;
     const extraVasen = extra.x - 2;
     const extraOikea = extra.x + extra.sade - 1;
 
-    if(event.clientX > extraVasen && event.clientX < extraOikea 
-        && event.clientY > extraYla && event.clientY < extraAla){
-        pisteet += 5;
-        elamat += 1;
+    if(event.clientX > palloVasen && event.clientX < palloOikea 
+        && event.clientY > palloYla && event.clientY < palloAla){
+        pallo.suunnanArpominen();
+        pallo.sijainninArpominen();
+        pisteet += 1;
+    } else if (event.clientX > extraVasen && event.clientX < extraOikea 
+        && event.clientY > extraYla && event.clientY < extraAla) {
+            elamat += 1;
+            pisteet += 3;
+    } else {
+        elamat -= 1;
     }
     extra.x = -100
     extra.y = -100
@@ -163,13 +160,9 @@ function esine(sade, vari){
             this.suunta = 7;
         }
 
-        if(pisteet > 0 && pisteet % 10 == 0){
-            pallo.nopeus += 0.1;
+        if(pisteet > 0 && pisteet % 5 == 0){
+            pallo.nopeus += 0.2;
             extra.sijainninArpominen();
-            if(elamat < 3){
-                elamat += 1;
-            }
-    
         }
     }
     this.sijainninArpominen = function(){
