@@ -32,13 +32,24 @@ function klikkaus(event){
     } else {
         elamat -= 1;
     }
+
+    const extraYla = extra.y - 2;
+    const extraAla = extra.y + extra.sade - 1;
+    const extraVasen = extra.x - 2;
+    const extraOikea = extra.x + extra.sade - 1;
+
+    if(event.clientX > extraVasen && event.clientX < extraOikea 
+        && event.clientY > extraYla && event.clientY < extraAla){
+        pisteet += 5;
+        elamat += 1;
+    }
+    extra.x = -100
+    extra.y = -100
+
     // pallon nopeutus ja ylimääräinen elämä
     if(pisteet > 0 && pisteet % 10 == 0){
-        pallo.nopeus += 0.1;
         extra.sijainninArpominen();
-        if(elamat < 3){
-            elamat += 1;
-        }
+
     }
 }
 
@@ -151,6 +162,15 @@ function esine(sade, vari){
         } else {
             this.suunta = 7;
         }
+
+        if(pisteet > 0 && pisteet % 10 == 0){
+            pallo.nopeus += 0.1;
+            extra.sijainninArpominen();
+            if(elamat < 3){
+                elamat += 1;
+            }
+    
+        }
     }
     this.sijainninArpominen = function(){
         let Xmin = Math.ceil(50);
@@ -190,8 +210,8 @@ function varinArpominen(){
 
 
 function bonus(sade, vari){
-    this.x = 100;
-    this.y = 100;
+    this.x = -100;
+    this.y = -100;
     this.vari = vari;
     this.sade = sade;
     this.paivita = function(){
