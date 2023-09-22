@@ -11,8 +11,8 @@ function lataa(){
     document.getElementById("kommentti").innerHTML = "Elämät loppuivat,";
     pisteet = 0;
     elamat = 3;
-    extra = new bonus(20, "blue");
     pallo = new esine(20, varinArpominen());
+    extra = new bonus(20, 'rgba(3, 136, 252, 0.7)');
     pallo.suunnanArpominen();
     pallo.sijainninArpominen();
     peliAlue.canvas.addEventListener("mousedown", klikkaus);
@@ -73,13 +73,13 @@ var peliAlue = {
         } else {
             document.getElementById("edelliset").innerHTML += `| ${pisteet} `;
         }
-        if(pisteet < 15){
+        if(pisteet < 10){
             document.getElementById("kommentti").innerHTML += " tarvitset hieman harjoitusta.";
-        } else if(pisteet >= 15 && pisteet < 30){
+        } else if(pisteet >= 10 && pisteet < 15){
             document.getElementById("kommentti").innerHTML += " ei huono saavutus.";
-        } else if(pisteet >= 30 && pisteet < 60){
+        } else if(pisteet >= 15 && pisteet < 25){
             document.getElementById("kommentti").innerHTML += " taitavasti pelattu!";
-        } else if(pisteet >= 60 && pisteet < 100){
+        } else if(pisteet >= 25 && pisteet < 30){
             document.getElementById("kommentti").innerHTML += " erinomainen tulos!";
         } else {
             document.getElementById("kommentti").innerHTML += " kerrassaan ilmiömäinen suoritus!";
@@ -196,6 +196,8 @@ function varinArpominen(){
     let vari3 = Math.round(Math.random()*255);
     return `rgb(${vari1}, ${vari2}, ${vari3})`;
 }
+
+
 
 
 
