@@ -113,23 +113,23 @@ function esine(sade, vari){
         if(this.suunta == 0){
             this.y -= this.nopeus;
         } else if(this.suunta == 1){
-            this.x += this.nopeus * 0.8;
-            this.y -= this.nopeus * 0.8;
+            this.x += this.nopeus * 0.7;
+            this.y -= this.nopeus * 0.7;
         } else if(this.suunta == 2){
             this.x += this.nopeus;
         } else if(this.suunta == 3){
-            this.x += this.nopeus * 0.8;
-            this.y += this.nopeus * 0.8;
+            this.x += this.nopeus * 0.7;
+            this.y += this.nopeus * 0.7;
         } else if(this.suunta == 4){
             this.y += this.nopeus;
         } else if(this.suunta == 5){
-            this.x -= this.nopeus * 0.8;
-            this.y += this.nopeus * 0.8;
+            this.x -= this.nopeus * 0.7;
+            this.y += this.nopeus * 0.7;
         } else if(this.suunta == 6){
             this.x -= this.nopeus;
         } else {
-            this.x -= this.nopeus * 0.8;
-            this.y -= this.nopeus * 0.8;
+            this.x -= this.nopeus * 0.7;
+            this.y -= this.nopeus * 0.7;
         }
         // pelialueelta karkaaminen
         if(this.x > peliAlue.canvas.width || this.x < 0 || this.y > peliAlue.canvas.height || this.y < 0){
