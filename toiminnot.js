@@ -33,7 +33,7 @@ function klikkaus(event){
         pallo.suunnanArpominen();
         pallo.sijainninArpominen();
         pisteet += 1;
-        pallo.nopeus += 0.1;
+        pallo.nopeus += 0.05;
     } else if (event.clientX > extraVasen && event.clientX < extraOikea 
         && event.clientY > extraYla && event.clientY < extraAla) {
             pisteet += 1;
@@ -195,14 +195,6 @@ function varinArpominen(){
     let vari3 = Math.round(Math.random()*255);
     return `rgb(${vari1}, ${vari2}, ${vari3})`;
 }
-
-
-
-
-
-
-
-
 
 function bonus(sade, vari){
     this.x = -100;
