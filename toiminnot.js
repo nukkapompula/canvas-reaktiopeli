@@ -33,10 +33,11 @@ function klikkaus(event){
         pallo.suunnanArpominen();
         pallo.sijainninArpominen();
         pisteet += 1;
+        pallo.nopeus += 0.1;
     } else if (event.clientX > extraVasen && event.clientX < extraOikea 
         && event.clientY > extraYla && event.clientY < extraAla) {
             pisteet += 1;
-            if(elamat < 3){
+            if(elamat < 5){
             elamat += 1;
             }        
     } else {
@@ -161,10 +162,6 @@ function esine(sade, vari){
         } else {
             this.suunta = 7;
         }
-
-        if(pisteet > 0 && pisteet % 5 == 0){
-            pallo.nopeus += 0.2;
-        }
     }
     this.sijainninArpominen = function(){
         let Xmin = Math.ceil(50);
@@ -175,6 +172,8 @@ function esine(sade, vari){
         let arpaY = Math.floor(Math.random() * (Ymax - Ymin) + Ymin);
         this.x = arpaX;
         this.y = arpaY;
+
+        
     }
 }
 
